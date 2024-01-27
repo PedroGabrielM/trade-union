@@ -23,6 +23,8 @@ class TradeUnionApplicationTests {
 	void createModuleDocumentation() {
 		new Documenter(modules)
 				.writeDocumentation()
+				.writeModuleCanvases()
+				.writeModulesAsPlantUml()
 				.writeIndividualModulesAsPlantUml();
 	}
 

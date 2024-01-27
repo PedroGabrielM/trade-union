@@ -1,4 +1,4 @@
-package br.com.gameoverproject.tradeunion.client.domain;
+package br.com.gameoverproject.tradeunion.client.dto;
 
 public record ClienteDTO(
         Long id,
@@ -7,5 +7,4 @@ public record ClienteDTO(
         String email,
         String phone,
         String address
-) {
-}
+) {}
