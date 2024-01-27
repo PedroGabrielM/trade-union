@@ -15,6 +15,10 @@ public class AdministratorServiceImpl implements AdministratorService {
     @Autowired
     private AdministratorRepository administratorRepository;
 
+    public AdministratorServiceImpl(AdministratorRepository administratorRepository) {
+        this.administratorRepository = administratorRepository;
+    }
+
     @Override
     public Administrator save(Administrator administrator) {
         return administratorRepository.save(administrator);

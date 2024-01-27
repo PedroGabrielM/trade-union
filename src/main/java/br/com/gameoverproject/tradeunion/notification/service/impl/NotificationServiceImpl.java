@@ -15,6 +15,10 @@ public class NotificationServiceImpl implements NotificationService {
     @Autowired
     private NotificationRespository notificationRespository;
 
+    public NotificationServiceImpl(NotificationRespository notificationRespository) {
+        this.notificationRespository = notificationRespository;
+    }
+
     @Override
     public Notification save(Notification notification) {
         return notificationRespository.save(notification);

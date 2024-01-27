@@ -15,6 +15,10 @@ public class DepartamentServiceImpl implements DepartamentService {
     @Autowired
     private DepartamentRepository departamentRepository;
 
+    public DepartamentServiceImpl(DepartamentRepository departamentRepository) {
+        this.departamentRepository = departamentRepository;
+    }
+
     @Override
     public Departament save(Departament departament) {
         return departamentRepository.save(departament);

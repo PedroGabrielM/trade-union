@@ -15,6 +15,10 @@ public class VacancyServiceImpl implements VacancyService {
     @Autowired
     private VacancyRepository vacancyRepository;
 
+    public VacancyServiceImpl(VacancyRepository vacancyRepository) {
+        this.vacancyRepository = vacancyRepository;
+    }
+
     @Override
     public Vacancy save(Vacancy vacancy) {
         return vacancyRepository.save(vacancy);
