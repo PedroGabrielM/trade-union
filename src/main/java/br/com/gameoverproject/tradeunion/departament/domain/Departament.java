@@ -17,6 +17,6 @@ public class Departament {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nameDepartament;
-    private String departamentArea;
+    private String name;
+    private DepartamentType departament;
 }
