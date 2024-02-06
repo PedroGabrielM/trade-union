@@ -13,8 +13,12 @@ import java.util.Optional;
 @RestController
 @RequestMapping("api/v1/trade-union")
 public class TradeUnionController {
-    @Autowired
+
     private TradeUnionService service;
+
+    public TradeUnionController(TradeUnionService service) {
+        this.service = service;
+    }
 
     @GetMapping("/companys")
     public ResponseEntity<List<TradeUnion>> findAll(){

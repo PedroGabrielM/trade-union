@@ -12,7 +12,6 @@ import java.util.Optional;
 @Service
 public class VacancyServiceImpl implements VacancyService {
 
-    @Autowired
     private VacancyRepository vacancyRepository;
 
     public VacancyServiceImpl(VacancyRepository vacancyRepository) {

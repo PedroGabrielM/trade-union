@@ -14,8 +14,11 @@ import java.util.Optional;
 @RequestMapping("api/v1/administrator")
 public class AdministratorController {
 
-    @Autowired
     private AdministratorService administratorService;
+
+    public AdministratorController(AdministratorService administratorService) {
+        this.administratorService = administratorService;
+    }
 
     @GetMapping("/administrators")
     public ResponseEntity<List<Administrator>> findAll(){

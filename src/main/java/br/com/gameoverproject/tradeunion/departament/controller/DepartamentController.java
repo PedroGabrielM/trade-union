@@ -14,8 +14,11 @@ import java.util.Optional;
 @RequestMapping("api/v1/departament")
 public class DepartamentController {
 
-    @Autowired
     private DepartamentService departamentService;
+
+    public DepartamentController(DepartamentService departamentService) {
+        this.departamentService = departamentService;
+    }
 
     @GetMapping("/departaments")
     public ResponseEntity<List<Departament>> findAll(){

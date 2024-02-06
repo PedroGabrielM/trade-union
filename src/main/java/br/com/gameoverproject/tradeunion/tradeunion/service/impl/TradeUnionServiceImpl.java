@@ -12,6 +12,11 @@ import java.util.Optional;
 public class TradeUnionServiceImpl implements TradeUnionService {
 
     private TradeUnionRepository repository;
+
+    public TradeUnionServiceImpl(TradeUnionRepository repository) {
+        this.repository = repository;
+    }
+
     @Override
     public TradeUnion save(TradeUnion tradeUnion) {
         return repository.save(tradeUnion);

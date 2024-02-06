@@ -14,8 +14,11 @@ import java.util.Optional;
 @RequestMapping("api/v1/notification")
 public class NotificationController {
 
-    @Autowired
     private NotificationService notificationService;
+
+    public NotificationController(NotificationService notificationService) {
+        this.notificationService = notificationService;
+    }
 
     @GetMapping("/documents")
     public ResponseEntity<List<Notification>> findAll(){

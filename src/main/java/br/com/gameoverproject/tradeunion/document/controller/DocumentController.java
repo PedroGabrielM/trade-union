@@ -14,8 +14,11 @@ import java.util.Optional;
 @RequestMapping("api/v1/document")
 public class DocumentController {
 
-    @Autowired
     private DocumentService documentService;
+
+    public DocumentController(DocumentService documentService) {
+        this.documentService = documentService;
+    }
 
     @GetMapping("/documents")
     public ResponseEntity<List<Document>> findAll(){

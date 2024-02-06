@@ -12,7 +12,6 @@ import java.util.Optional;
 @Service
 public class DepartamentServiceImpl implements DepartamentService {
 
-    @Autowired
     private DepartamentRepository departamentRepository;
 
     public DepartamentServiceImpl(DepartamentRepository departamentRepository) {

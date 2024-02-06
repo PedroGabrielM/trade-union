@@ -14,8 +14,11 @@ import java.util.Optional;
 @RequestMapping("api/v1/vacancy")
 public class VacancyController {
 
-    @Autowired
     private VacancyService vacancyService;
+
+    public VacancyController(VacancyService vacancyService) {
+        this.vacancyService = vacancyService;
+    }
 
     @GetMapping("/documents")
     public ResponseEntity<List<Vacancy>> findAll(){

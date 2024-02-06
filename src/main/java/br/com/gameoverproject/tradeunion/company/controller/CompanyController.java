@@ -14,8 +14,11 @@ import java.util.Optional;
 @RequestMapping("api/v1/company")
 public class CompanyController {
 
-    @Autowired
     private CompanyService companyService;
+
+    public CompanyController(CompanyService companyService) {
+        this.companyService = companyService;
+    }
 
     @GetMapping("/companys")
     public ResponseEntity<List<Company>> findAll(){
